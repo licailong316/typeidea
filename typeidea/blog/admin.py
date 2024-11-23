@@ -56,7 +56,7 @@ class PostAdmin(admin.ModelAdmin):
     def operator(self, obj):
         return format_html(
             '<a href="{}">编辑</a>',
-            reversed('admin:blog_post_change', args=(obj.id,))
+            reverse('admin:blog_post_change', args=(obj.id,))
         )
     operator.short_description = '操作'
 
